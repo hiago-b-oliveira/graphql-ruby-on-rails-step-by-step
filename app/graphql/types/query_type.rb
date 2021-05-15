@@ -13,5 +13,15 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :hello_world, String, null: false,
+          description: "A hello world field" do
+      argument :name, String, required: true
+      argument :nickname, String, required: true
+    end
+    def hello_world(name:, nickname:)
+      "Hello #{name}, also know as #{nickname}!"
+    end
+
   end
 end
