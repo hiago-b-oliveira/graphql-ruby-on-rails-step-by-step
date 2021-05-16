@@ -7,20 +7,18 @@ module Types
       "Hello World"
     end
 
-    # Inline mutation
-    # field :create_author, AuthorType, null: true, description: "Create an author" do
-    #   argument :first_name, String, required: false
-    #   argument :last_name, String, required: false
-    #   argument :yob, Int, required: false
-    #   argument :is_alive, Boolean, required: false
-    # end
-    #
-    # def create_author(first_name:, last_name:, yob:, is_alive:)
-    #   Author.create first_name: first_name, last_name: last_name, yob: yob, is_alive: is_alive
-    # end
-
     # Separated file mutation
     field :create_author, Types::AuthorType, mutation: Mutations::CreateAuthor,
       description: "Create an Author"
+
+    # Inline mutation
+    field :update_author, Boolean, null: false, description: "Update and author" do
+      argument :author, Types::AuthorInputType, required: true
+    end
+
+    def update_author(author:)
+      existing = Author.where(id: author[:id]).first
+      existing&.update author.to_h
+    end
   end
 end
