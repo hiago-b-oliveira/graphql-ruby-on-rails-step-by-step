@@ -20,6 +20,7 @@ module Types
     # end
 
     # Separated file mutation
-    field :create_author, Types::AuthorType, mutation: Mutations::CreateAuthor
+    field :create_author, Types::AuthorType, mutation: Mutations::CreateAuthor,
+      description: "Create an Author"
   end
 end
