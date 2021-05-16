@@ -30,5 +30,10 @@ module Types
       Author.where(id: id).first
     end
 
+    field :authors, [Types::AuthorType], null: true, description: "All the authors"
+    def authors
+      Author.all
+    end
+
   end
 end
