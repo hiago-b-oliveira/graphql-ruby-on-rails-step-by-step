@@ -5,4 +5,6 @@ class Author < ApplicationRecord
     [first_name, last_name].compact.join ' '
   end
 
+  validates :last_name, presence: true
+
 end
