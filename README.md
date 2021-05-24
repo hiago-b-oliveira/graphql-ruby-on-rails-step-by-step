@@ -1,24 +1,8 @@
-# README
+## Creating a Ruby on Rails GraphQL APP step by step
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this repo, you will find the steps required to create an "Authors Crud" using Rails and GraphQL. 
 
-Things you may want to cover:
+[Each commit](https://github.com/hiago-b-oliveira/graphql-ruby-on-rails-step-by-step/commits/main) represents a step of what was built (from bottom to up):
 
-* Ruby version
+![image](https://user-images.githubusercontent.com/18020705/119294013-eb29d380-bc29-11eb-9872-c0c4c2722a19.png)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
