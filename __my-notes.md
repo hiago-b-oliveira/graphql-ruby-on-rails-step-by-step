@@ -17,3 +17,11 @@
 **Concepts:**
 *  Reading => queries
 *  Writing => mutations
+
+**What Next?**
+*  Subscriptions;
+*  Dynamic schema;
+*  Lazy execution;
+*  Ahead-of-time analysis;
+*  Complexity management; 
+*  Multiplexing;
